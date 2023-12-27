@@ -16,5 +16,5 @@ inputs:
 runs:
   using: composite
   steps:
-  - run: butler push "${{ inputs.path }}" ${{ inputs.target }} ${{ inputs.version != '' && format('--userversion {0}', inputs.version) }} ${{ inputs.version-file != '' && format('--userversion-file {0}', inputs.version-file) }}
+  - run: butler push "${{ inputs.path }}" ${{ inputs.target }} ${{ inputs.version != '' && format('--userversion {0}', inputs.version) || '' }} ${{ inputs.version-file != '' && format('--userversion-file {0}', inputs.version-file) || '' }}
     shell: bash
