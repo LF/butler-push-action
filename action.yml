@@ -3,15 +3,13 @@ description: Pushes a local directory to itch.io using butler
 
 inputs:
   path:
-    type: string
     default: "."
   target:
-    type: string
     required: true
   version:
-    type: string
+    default: ""
   version-file:
-    type: string
+    default: ""
 
 runs:
   using: composite
